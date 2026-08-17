@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Tanya Singh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <style>
+        /* Force mobile menu to show on smaller screens */
+        @media screen and (max-width: 900px) {
+            .mobile-menu-toggle {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
+                z-index: 1001 !important;
+            }
+
+            .nav-menu {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                overflow: hidden !important;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ohno-softie.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'ohno-softie',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="home.html" class="logo-text">Tanya Singh</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link active">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research.html" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="experience.html" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="coursework.html" class="nav-link">Coursework</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu"
+                style="display: none; flex-direction: column; justify-content: center; align-items: center; width: 30px; height: 30px; background: none; border: none; cursor: pointer; padding: 0; z-index: 1001; position: relative;">
+                <span
+                    style="display: block; width: 25px; height: 3px; background-color: #1e2a3a; margin: 3px 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: center;"></span>
+                <span
+                    style="display: block; width: 25px; height: 3px; background-color: #1e2a3a; margin: 3px 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: center;"></span>
+                <span
+                    style="display: block; width: 25px; height: 3px; background-color: #1e2a3a; margin: 3px 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: center;"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="coursework.html">Coursework</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">My Projects</h1>
+            <p class="page-subtitle">A showcase of my recent work and creative solutions</p>
+        </div>
+    </section>
+
+    <!-- Project Filter -->
+    <section class="project-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="systems">Systems Programming</button>
+                <button class="filter-btn" data-filter="algorithms">Algorithms</button>
+                <button class="filter-btn" data-filter="low-level">Low-Level Programming</button>
+                <button class="filter-btn" data-filter="web">Web Applications</button>
+                <button class="filter-btn" data-filter="functional-programming">Functional Programming</button>
+                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-showcase">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Featured Project -->
+                <div class="project-card" data-category="systems">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Going Commando</h3>
+                        <p class="project-description">A comprehensive command-line shell implementation in C that
+                            handles process management, system calls, and I/O redirection. Features include background
+                            process execution, signal handling, and advanced shell scripting capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Shell Programming</span>
+                            <span class="tech-tag">Process Management</span>
+                            <span class="tech-tag">System Calls</span>
+                            <span class="tech-tag">I/O Redirection</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-terminal"></i>
+                                <span>Command Line</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-cogs"></i>
+                                <span>Systems Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maze Solver -->
+                <div class="project-card" data-category="algorithms">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Maze Solver with Breadth-First Search</h3>
+                        <p class="project-description">An efficient maze-solving algorithm implementation using
+                            breadth-first search to find the shortest path through complex mazes. Demonstrates graph
+                            traversal algorithms and data structure optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">BFS Algorithm</span>
+                            <span class="tech-tag">Graph Theory</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-route"></i>
+                                <span>Shortest Path</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EL Malloc -->
+                <div class="project-card" data-category="systems">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Performance Optimization & Multithreading</h3>
+                        <p class="project-description">A custom memory allocator implementation with performance
+                            optimization and multithreading support using pthreads. Features include thread-safe memory
+                            allocation, fragmentation reduction, and performance benchmarking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Memory Management</span>
+                            <span class="tech-tag">Multithreading</span>
+                            <span class="tech-tag">Optimization</span>
+                            <span class="tech-tag">Performance</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-memory"></i>
+                                <span>Custom Allocator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assembly Programming -->
+                <div class="project-card" data-category="low-level">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assembly Programming & PuzzleBin</h3>
+                        <p class="project-description">Low-level assembly programming project involving x86-64
+                            architecture and reverse engineering techniques. Combines assembly language with C
+                            integration for PuzzleBin, demonstrating system-level programming skills.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">x86-64 Assembly</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Reverse Engineering</span>
+                            <span class="tech-tag">GDB Debugging</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-microchip"></i>
+                                <span>Low-Level</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Website -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920/resumerepository" class="project-link"
+                                    title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Interactive Personal Resume Website</h3>
+                        <p class="project-description">A fully responsive, interactive resume website built from scratch
+                            using HTML, CSS, and JavaScript. Features modern design principles, smooth animations, and
+                            dynamic content presentation to showcase professional experience and skills.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">Web Development</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-laptop"></i>
+                                <span>Web Development</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bit Manipulation -->
+                <div class="project-card" data-category="low-level">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Bit Manipulation, Debugging, and Hashsets</h3>
+                        <p class="project-description">Advanced bit manipulation techniques combined with efficient
+                            hashset implementation and comprehensive debugging using GDB. Explores low-level programming
+                            concepts and data structure optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Bit Manipulation</span>
+                            <span class="tech-tag">GDB Debugging</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-bug"></i>
+                                <span>Debugging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 1 -->
+                <div class="project-card" data-category="functional-programming">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">OCaml Warmup</h3>
+                        <p class="project-description">Introduces functional programming in OCaml through implementing a
+                            collection of small functions involving arithmetic, recursion, list processing, and
+                            higher-order functions. Emphasizes recursive problem solving, immutability, type
+                            correctness, and use of higher-order abstractions such as map and fold under strict
+                            implementation constraints.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">Functional Programming</span>
+                            <span class="tech-tag">Recursion</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Functional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="functional-programming">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Higher-Order Functions on Trees & Database Design</h3>
+                        <p class="project-description">Implements a functional database system in OCaml using
+                            user-defined types and higher-order functions, supporting insertion, deletion, querying with
+                            logical conditions, sorting, updating, and bulk deletion. Additionally defines higher-order
+                            operations over binary trees, including fold-based implementations of mapping, traversal,
+                            mirroring, composition, depth calculation, trimming, and reconstruction from traversal
+                            orders.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">Database Design</span>
+                            <span class="tech-tag">Binary Trees</span>
+                            <span class="tech-tag">Higher-Order Functions</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-tree"></i>
+                                <span>Data Structures</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="functional-programming">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Regular Expression Engine</h3>
+                        <p class="project-description">Implements a regular expression engine by constructing and
+                            simulating finite automata. Includes NFA simulation, epsilon-closure and transition
+                            computation, subset construction to convert NFAs to DFAs, and translation of regular
+                            expressions into equivalent NFAs. Emphasizes formal language theory, functional programming
+                            techniques, and correctness of automaton-based execution.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">Regex</span>
+                            <span class="tech-tag">Finite Automata</span>
+                            <span class="tech-tag">NFA/DFA</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-search"></i>
+                                <span>Regex Engine</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="functional-programming">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MicroCaml Lexer, Parser, and Interpreter</h3>
+                        <p class="project-description">Implements a dynamically typed OCaml-like language called
+                            MicroCaml by building a full lexer, recursive-descent parser, and interpreter. Supports
+                            features such as let and let rec bindings, anonymous functions, closures, records,
+                            conditionals, and arithmetic and logical expressions. Emphasizes language design,
+                            grammar-based parsing, lexical scoping, and environment-based evaluation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">Lexer</span>
+                            <span class="tech-tag">Parser</span>
+                            <span class="tech-tag">Interpreter</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-terminal"></i>
+                                <span>Interpreters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="functional-programming">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Type Inference & Type Checking</h3>
+                        <p class="project-description">Implements a static type checker for a subset of the C language
+                            (SmallC) and a constraint-based type inferencer for MicroCaml. Verifies type correctness
+                            across expressions and control flow, detects declaration and type errors, and performs
+                            unification-based inference to derive function and polymorphic types without explicit
+                            annotations. Emphasizes formal type systems and static program analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">Type Checking</span>
+                            <span class="tech-tag">Type Inference</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Type Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects 6 & 7 -->
+                <div class="project-card" data-category="functional-programming">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Rust Programming & Garbage Collection</h3>
+                        <p class="project-description">Introduces systems programming in Rust through implementing
+                            utility functions that emphasize ownership, borrowing, iterators, pattern matching, and safe
+                            mutation. Expands into a comprehensive memory management project implementing three garbage
+                            collection strategies—reference counting, mark-and-sweep, and stop-and-copy—over simulated
+                            stack and heap structures. Emphasizes memory safety, graph reachability, pointer management,
+                            and runtime behavior under Rust’s safety guarantees.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Rust</span>
+                            <span class="tech-tag">Garbage Collection</span>
+                            <span class="tech-tag">Systems Programming</span>
+                            <span class="tech-tag">Memory Safety</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-dumpster"></i>
+                                <span>Memory Mgmt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C1 -->
+                <div class="project-card" data-category="algorithms">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Extensible Stack</h3>
+                        <p class="project-description">Implemented an extensible stack supporting dynamic expansion and
+                            contraction based on amortized analysis principles. The stack automatically resizes during
+                            push and pop operations using configurable growth parameters, ensuring efficient memory
+                            utilization while maintaining constant amortized time complexity for stack operations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Dynamic Arrays</span>
+                            <span class="tech-tag">Stack ADT</span>
+                            <span class="tech-tag">Amortized Analysis</span>
+                            <span class="tech-tag">Complexity Analysis</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2026</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Stack Data Structure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C2 -->
+                <div class="project-card" data-category="algorithms">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Binary Search Tree Database Index</h3>
+                        <p class="project-description">Developed a binary search tree used as an index for a database of
+                            records. Implemented insertion, deletion, single-key queries, and range queries while
+                            maintaining parent, predecessor, and successor pointers to support efficient traversals and
+                            updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Binary Search Trees</span>
+                            <span class="tech-tag">Database Indexing</span>
+                            <span class="tech-tag">Range Queries</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2026</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Tree Indexing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C3 -->
+                <div class="project-card" data-category="algorithms">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">B-Tree</h3>
+                        <p class="project-description">Implemented a modified B-tree supporting insertion, deletion, and
+                            search operations with custom balancing rules. Developed node splitting, merging, and
+                            sibling rotations while maintaining balanced multiway search tree properties for efficient
+                            storage and retrieval.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">B-Trees</span>
+                            <span class="tech-tag">Node Splitting/Merging</span>
+                            <span class="tech-tag">Balanced Trees</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2026</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-sitemap"></i>
+                                <span>Multiway Trees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C4 -->
+                <div class="project-card" data-category="algorithms">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Generalized Scapegoat Tree</h3>
+                        <p class="project-description">Implemented a generalized Scapegoat Tree supporting configurable
+                            balancing factors (α), insertion, deletion, and subtree rebuilding. Maintained token-based
+                            accounting for incremental and deferred rebuilding while preserving logarithmic search
+                            performance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scapegoat Trees</span>
+                            <span class="tech-tag">Self-Balancing BSTs</span>
+                            <span class="tech-tag">Tree Reconstruction</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2026</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Balanced BSTs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C6 -->
+                <div class="project-card" data-category="algorithms">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/tanyas8920" class="project-link" title="View Source Code"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Disjoint Sets & Kruskal's Algorithm</h3>
+                        <p class="project-description">Implemented the Disjoint Set (Union-Find) data structure using
+                            weighted union and path compression. Applied the structure to Kruskal's Minimum Spanning
+                            Tree algorithm for graph processing and cycle detection.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Disjoint Sets</span>
+                            <span class="tech-tag">Union-Find</span>
+                            <span class="tech-tag">Kruskal's Algorithm</span>
+                            <span class="tech-tag">Graph Algorithms</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2026</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-compress-alt"></i>
+                                <span>Graph Theory</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Machine Learning Stroke Prediction -->
+                <div class="project-card" data-category="machine-learning"
+                    style="height: auto; min-height: 800px; padding-bottom: 2rem;">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://tanyas8920.github.io" class="project-link" title="View Project"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Machine Learning Stroke Prediction</h3>
+                        <p class="project-description"
+                            style="display: block; -webkit-line-clamp: unset; overflow: visible; min-height: auto; height: auto; max-height: none; padding-bottom: 1.5rem;">
+                            This project develops and evaluates machine learning models to predict an individual's risk
+                            of stroke using demographic, lifestyle, and medical information. The objective is to
+                            identify key factors associated with stroke risk while comparing the performance of multiple
+                            classification algorithms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>2026</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Process -->
+    <section class="project-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Development Process</h2>
+                <p class="section-subtitle">How I approach systems programming projects</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Analysis & Design</h3>
+                        <p>Understanding system requirements, analyzing performance constraints, and designing efficient
+                            algorithms and data structures.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Implementation</h3>
+                        <p>Writing clean, optimized code with proper memory management, error handling, and adherence to
+                            best practices.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Testing & Debugging</h3>
+                        <p>Comprehensive testing using GDB, valgrind, and custom test suites to ensure reliability and
+                            performance.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Optimization & Documentation</h3>
+                        <p>Performance profiling, code optimization, and thorough documentation for maintainability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content"></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pages.js"></script>
+    <script>
+        // Debug and force mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Projects page loaded');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const navMenu = document.querySelector('.nav-menu');
+
+            console.log('Mobile toggle found:', !!mobileToggle);
+            console.log('Mobile nav found:', !!mobileNav);
+            console.log('Nav menu found:', !!navMenu);
+            console.log('Window width:', window.innerWidth);
+
+            // Force mobile menu behavior based on window size
+            function checkMobileMenu() {
+                const isMobile = window.innerWidth <= 900;
+                console.log('Window width:', window.innerWidth, 'Is mobile:', isMobile);
+
+                if (isMobile) {
+                    console.log('Forcing mobile menu display');
+                    if (mobileToggle) {
+                        mobileToggle.style.display = 'flex';
+                        mobileToggle.style.visibility = 'visible';
+                        mobileToggle.style.opacity = '1';
+                        mobileToggle.style.position = 'relative';
+                        mobileToggle.style.zIndex = '1001';
+                    }
+                    if (navMenu) {
+                        navMenu.style.display = 'none';
+                        navMenu.style.visibility = 'hidden';
+                        navMenu.style.opacity = '0';
+                        navMenu.style.height = '0';
+                        navMenu.style.overflow = 'hidden';
+                    }
+                } else {
+                    console.log('Forcing desktop menu display');
+                    if (mobileToggle) {
+                        mobileToggle.style.display = 'none';
+                    }
+                    if (navMenu) {
+                        navMenu.style.display = '';
+                        navMenu.style.visibility = '';
+                        navMenu.style.opacity = '';
+                        navMenu.style.height = '';
+                        navMenu.style.overflow = '';
+                    }
+                }
+            }
+
+            // Run immediately and on resize
+            checkMobileMenu();
+            window.addEventListener('resize', checkMobileMenu);
+
+
+            if (mobileToggle) {
+                console.log('Mobile toggle display:', window.getComputedStyle(mobileToggle).display);
+            }
+        });
+
+        // Projects page filtering - guaranteed to work
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            console.log('Filter buttons found:', filterButtons.length);
+            console.log('Project cards found:', projectCards.length);
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    console.log('Button clicked:', this.getAttribute('data-filter'));
+
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Show/hide project cards
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transition = 'opacity 0.5s ease';
+                            }, 10);
+                        } else if (category === filterValue) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transition = 'opacity 0.5s ease';
+                            }, 10);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize - show all cards
+            projectCards.forEach(card => {
+                card.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
